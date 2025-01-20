@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            font-family: "kanit", sans-serif;
+            margin: 0;
+            padding: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(209, 176, 118);
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .container{
+           max-width: 600px;
+           background-color: rgb(217, 185, 124);
+           padding: 40px;
+           border-radius: 10px;
+           box-shadow:0 0 10px 0 rgba(0, 0, 0, 0.1);
+           margin: auto;
+        }
+        input, select, textarea{
+            padding: 10px;
+            border-radius:  5px  #d88129;
+            border: 1px solid #d88129;
+
+        }
+        button{
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #f03e07;
+            color: rgb(188, 160, 160);
+            cursor: pointer;
+            font-size: 16px;
+            
+
+        }
+      h1{
+          text-align: center;
+          color: #c9721b;
+      }
+      button:hover{
+          background-color: #07cdf0;
+          color: #fff;
+      }
+      label{
+          font-weight: bold;
+      }
+    </style>
+    <body>
+        
+    <div class="container">
+    <h1>Personal Information</h1>
+    <fieldset>
+        
+        <form accept="/Submit">
+        <label for=""> Nane</label>
+        <input type="text" id="ff" Name="Fname" m placeholder="Enter you name" required>
+         
+         <label for="">Email</label>
+         <input type="text" id="mm" Name="Eamil" placeholder="Enter you Eamil" > 
+         
+         <label for="Date of Birth">Date of Birth</label>
+         <input type="date" name="date" id="date">
+           
+         <form action=""method="">
+         <label for="">Gender</label>
+          <select name="Gender" id="Gender">
+            <option value="">--select Gender--</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Others">Others</option>
+          
+
+          </select>  
+          <label for="hobbie">hobbie</label>
+           <textarea name="hobbie" id="hobbie" cols="30" rows="5" placeholder="List you hobbie"></textarea>
+
+            <label for="Country">Country</label>
+            <select name="Country" id="Country">
+            <option value="">--select Gender--</option>
+             <option value="Thailland">Thailland</option>
+             <option value="France">France</option>
+             <option value="Japan">Japan</option>
+              <option value="India">India</option>
+            </select>
+            <button>Submit</button>
+         </form>
+
+        
+</body>
+</html>
