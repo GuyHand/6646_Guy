@@ -1,11 +1,17 @@
-Kobphong Yusatid
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto" sans-serif;
+    background-color: rgb(27, 171, 227);
+}
 header{
-background-color: rgb(10, 132, 151);
+background-color: rgb(159, 8, 224);
 }
 nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 64px;
 }
 .menu ul{
     display: flex;
@@ -36,20 +42,66 @@ nav{
     text-decoration: none;
     border: none;
 }
+.btn-primary:hover{
+    background-color: rgb(181, 33, 77);
+    color: #f303ef;
+    padding: 8px 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    border: none;
+}
 .btn-secondary{
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(246, 246, 246);
     color: #3932ff;
     padding: 8px 16px;
     border-radius: 10px;
     text-decoration: none;
     border: 1px solid #3932ff;
 }
+.btn-secondary:hover{
+    background-color: rgb(0, 111, 230);
+    color: #ceceda;
+    padding: 8px 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    border: 1px solid #3932ff;
+}
+.container{
 
+width:70% ;
+margin: 0 auto;
 
+}
+.card{
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.card img{
+
+    width: 100%;
+    border-radius: 10px;
+}
 
 footer{
 background-color: rgb(128, 125, 214);
+height: 100px;
+
+display: flex;
+color: #ffffff;
+padding: 20px;
+justify-content: center;
+flex-direction: column;
+line-height: 0;
+align-items: center;
+
 }
-.container{
-background-color: rgb(78, 1, 151);
+a{
+    text-decoration: none;
+    color: #002ec6 ;
+}
+a:hover{
+    text-decoration: none;
+   color: aqua;
 }
