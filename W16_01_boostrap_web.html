@@ -168,7 +168,7 @@
     <div class="row">
         <!-- Column1 -->
         <div class="col-md-4 mb-4">
-            <div class="card pricing-card p-4">
+            <div class="card pricing-card p-4 m-auto">
                 <h3 class="plan-title text-primary">Free Plan</h3>
                 <p class="plan-price ">$0</p>
                 <p class="text-muted">per month</p>
@@ -184,7 +184,7 @@
         
         <!-- Column2 -->
         <div class="col-md-4 mb-4">
-            <div class="card pricing-card p-4">
+            <div class="card pricing-card p-4 m-auto">
                 <h3 class="plan-title text-primary">Pro Plan</h3>
                 <p class="plan-price">$29</p>
                 <p class="text-muted">per month</p>
@@ -200,7 +200,7 @@
 
         <!-- Column3 -->
         <div class="col-md-4 mb-4">
-            <div class="card pricing-card p-4">
+            <div class="card pricing-card p-4 m-auto">
                 <h3 class="plan-title text-primary">Member Plan</h3>
                 <p class="plan-price">$49</p>
                 <p class="text-muted">per month</p>
@@ -264,29 +264,29 @@
   </table>
   
 </div>
-<div class="container-fluid bg-body-secondary ">
-    <div class="container">
-          <div class="row">
+<div class="container-fluid bg-body-secondary">
+    <div class="container bg-body-secondary">
+        <div class="row">
             <div class="col-md-6">
-                <h1 class="text-capitalize">contact</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, 
-                    adipisicing elit. Obcaecati consectetur id, perferendis saepe qui similique.</p>
-                <p>Address : Nakhon Pathom, Thailand</p>
-                <p>Phone : +66 0924287351</p>
+                <h1 class="text-capitalize">Contact US</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis a ab ratione reprehenderit dolores 
+                    quibusdam, provident eius mollitia tempore enim.</p>
+                <p>Address : Nakorn phathom</p>
+                <p>Phone : +66 98-2767180</p>
             </div>
             <div class="col-md-6">
-                <form>
+                <form id="contactForm">
                     <div class="mb-3">
-                      <label for="exampleInputEmail1" class="form-label">Name</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <label for="name" class="form-label">Name</label>
+                      <input type="email" class="form-control" id="name" aria-describedby="emailHelp">
                     </div>
                     <div class="mb-3">
                       <label for="exampleInputPassword1" class="form-label">Email address</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1">
+                      <input type="password" class="form-control" id="email">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Messahe</label>
-                        <textarea class="form-control"></textarea>
+                        <label for="exampleInputPassword1" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" class="form-control"rows="4" ></textarea>
                       </div>
                     <div class="mb-3 form-check">
                       <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -294,12 +294,10 @@
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                   </form>
-                
             </div>
-            
-          </div>
+        </div>
     </div>
-</div>
+ </div>
 <!-- Footer -->
 <div class="container-fluid bg-dark text-white p-4">
     <p class="text-center">@copyright by Sippapas</p> 
@@ -337,6 +335,58 @@
                 confirmButtonText: 'Close'
             });
         });
+    });
+</script>
+
+
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Get form values
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        if (name && email && message) {
+            Swal.fire({
+                title: 'Success!',
+                text: 'Your message has been sent.',
+
+                //text: 'Your message has been sent.\n\n' +
+                
+                //'Name: ' + name + '\n' +
+                //'Email: ' + email + '\n' +
+                //'Message: ' + message,
+
+                //html: `<p>Your message has been sent.</p>
+                //<p><b>Name:</b> ${name}</p>
+                //<p><b>Email:</b> ${email}</p>
+                //<p><b>Message:</b> ${message}</p>`,
+
+                icon: 'success',
+                confirmButtonText: 'OK',
+
+
+                //showConfirmButton: false,
+                timer: 1500
+
+
+            }).then(() => {
+                // Optional: Reset form after submission
+                document.getElementById('contactForm').reset();
+            });
+        } else {
+            Swal.fire({
+                title: 'Error!',
+                text: 'Please fill out all fields.',
+                icon: 'error',
+                confirmButtonText: 'OK',
+                confirmButtonColor: 'red',
+                timer: 3500
+            });
+        }
     });
 </script>
 </body>
